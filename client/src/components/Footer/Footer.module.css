@@ -1,0 +1,26 @@
+.footer {
+    
+     padding: 20px;
+     text-align: center;
+     
+     position: relative;
+     bottom: 0;
+     width: 100%;
+   }
+   
+   .footerMessage {
+     font-size: 18px;
+     font-weight: bold;
+     margin: 0;
+   }
+   
+   .footerLink {
+     color: #ff6600;
+     text-decoration: none;
+     margin-left: 5px;
+   }
+   
+   .footerLink:hover {
+     text-decoration: underline;
+   }
+   
