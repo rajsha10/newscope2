@@ -10,7 +10,8 @@ function App() {
 
 
   return (
-    <Provider store={store}>  <Router>
+    <Provider store={store}>  
+    <Router>
     <Navbar />
     <Routes>
       <Route path='/' element={<Feed />} />
