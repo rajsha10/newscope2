@@ -1,13 +1,16 @@
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 40px;
+  align-self: center;
+  background-color: #be1e2d;
 }
 
-.logoContainer {
+/* .logoContainer {
   flex-grow: 1;
-}
+} */
 
 .logo {
   height: 40px;
@@ -19,12 +22,19 @@
   gap: 20px;
 }
 
-.navLink {
+ul li a{
+  font-size: 20px;
+}
 
+.navLink {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
+  color: #fff;
 }
 
 .navLink:hover {
   color: #ddd;
 }
+
+
+
