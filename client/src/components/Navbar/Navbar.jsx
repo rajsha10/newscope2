@@ -1,10 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleDropdown } from '../../features/dropdownSlice';
 import styles from './Navbar.module.css';
 import logo from '/images/logoNav.png';
 import { FaInstagram, FaFacebook, FaYoutube, FaSquareXTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const isDropdownOpen = useSelector((state) => state.dropdown.isDropdownOpen);
+
+  const handleDropdownToggle = () => {
+    dispatch(toggleDropdown());
+  };
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.logoContainer}>
@@ -23,20 +32,45 @@ const Navbar = () => {
           <Link to="/about" className={styles.navLink}>About Us</Link>
         </li>
       </ul>
-      <ul className={styles.navLinks}>
+      <ul className={styles.navLinks} id={styles.socials}>
         <li>
-          <a href="/"><FaInstagram color='black' /></a>
+          <a href="/"><FaInstagram color='white' /></a>
         </li>
         <li>
-          <a href="/"><FaFacebook color='black' /></a>
+          <a href="/"><FaFacebook color='white' /></a>
         </li>
         <li>
-          <a href="/"><FaYoutube color='black' /></a>
+          <a href="/"><FaYoutube color='white' /></a>
         </li>
         <li>
-          <a href="/"><FaSquareXTwitter color='black' /></a>
+          <a href="/"><FaSquareXTwitter color='white' /></a>
         </li>
       </ul>
+
+      {/* Dropdown Button for smaller screens */}
+      <div className={styles.socialDropToggle} onClick={handleDropdownToggle}>
+        {isDropdownOpen ? 'X' : '☰'}
+      </div>
+
+      {/* Dropdown for Social Icons */}
+      {isDropdownOpen && (
+        <div className={`${styles.socialDrop} ${isDropdownOpen ? 'active' : ''}`}>
+          <ul>
+            <li>
+              <a href="/"><FaInstagram color='black' /></a>
+            </li>
+            <li>
+              <a href="/"><FaFacebook color='black' /></a>
+            </li>
+            <li>
+              <a href="/"><FaYoutube color='black' /></a>
+            </li>
+            <li>
+              <a href="/"><FaSquareXTwitter color='black' /></a>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };
