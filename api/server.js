@@ -23,7 +23,7 @@ app.use(cors(corsOptions));
 connectDB();
 
 app.get("/", (resq, res) => {
-     res.json({ message: "News Ready" });
+     res.json({ message: "News is Ready" });
 })
 
 // Use routes
