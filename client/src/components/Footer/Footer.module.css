@@ -1,26 +1,108 @@
+/* @font-face {
+  font-family: 'Noto'; 
+  src: url('/fonts/NotoSans-VariableFont_wdth,wght.ttf') format('truetype');
+} */
+
+
 .footer {
-    
-     padding: 20px;
-     text-align: center;
-     
-     position: relative;
-     bottom: 0;
-     width: 100%;
-   }
-   
-   .footerMessage {
-     font-size: 18px;
-     font-weight: bold;
-     margin: 0;
-   }
-   
-   .footerLink {
-     color: #ff6600;
-     text-decoration: none;
-     margin-left: 5px;
-   }
-   
-   .footerLink:hover {
-     text-decoration: underline;
-   }
-   
+  background-color: #f8f5f5; /* Dark background */
+  color: 0a0a59; /* White text */
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footerMessage{
+  margin-bottom: 4rem;
+}
+
+.footerLogo{
+  width: 20rem;
+}
+
+.footerLogoImage {
+  max-width: 10rem; /* Adjust logo size */
+}
+
+.footerNav, .footerSocial {
+  flex: 1;
+}
+
+.footerNav h4 {
+  margin-bottom: 10px;
+  /* font-family: 'Noto'; */
+}
+
+.footerNav ul, .footerSocial ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footerNav li, .footerSocial li {
+  margin: 5px 0;
+  /* font-family: 'Noto'; */
+  font-size: 1rem;
+}
+
+.footerNav a, .footerSocial a {
+  color: #0a0a59; /* White links */
+  text-decoration: none; /* Remove underline */
+}
+
+.footerNav a:hover, .footerSocial a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footerBottom {
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Light border on top */
+  padding-top: 10px;
+}
+
+.footerBottom p {
+  margin: 0;
+  font-size: 14px; /* Smaller font size */
+}
+
+/* Media  */
+@media (max-width: 480px) {
+  .footer {
+      padding: 15px;
+      font-size: 0.8rem;
+  }
+  
+  .footerLogoImage {
+      max-width: 7rem;
+  }
+  
+  .footerNav, .footerSocial {
+      flex: 1;
+  }
+  
+  .footerNav h4 {
+      margin-bottom: 7px;
+  }
+  
+  .footerNav li, .footerSocial li {
+      font-size: 0.7rem;
+  }
+  
+  .footerBottom {
+      margin-top: 5px;
+      padding-top: 6px;
+  }
+  
+  .footerBottom p {
+      margin: 0;
+      font-size: 0.6rem;
+  }
+}

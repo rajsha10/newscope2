@@ -27,7 +27,11 @@ connectDB();
 // Use routes
 app.use("/api/v1/news", newsRouter);
 app.use("/api/v1/user", userRouter);
-app.use("/api/v1/admin",adminRouter )
+app.use("/api/v1/admin",adminRouter);
+app.use("/", (resq, res) => {
+     res.json({ message: "News Ready" });
+})
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
