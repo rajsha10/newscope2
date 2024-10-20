@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json()); // Middleware to parse JSON
 
 const corsOptions = {
-     origin: 'https://newscope2.vercel.app/', // Replace with your frontend's URL
+     origin: '*', // Replace with your frontend's URL
      methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
      credentials: true, // Allow credentials (e.g., cookies) to be sent
 };
@@ -22,7 +22,8 @@ app.use(cors(corsOptions));
 // MongoDB connection 
 connectDB();
 
-app.get("/", (resq, res) => {
+//checking root route
+app.get("/", (req, res) => {
      res.json({ message: "News is Ready" });
 })
 
