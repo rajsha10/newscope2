@@ -8,7 +8,7 @@ const NewsTiles = () => {
     const { articles, loading, error } = useSelector((state) => state.news);
 
     // Assuming that 'topRead' is the top 10 articles sorted by popularity
-    const topRead = articles.slice(0, 10); // Adjust this logic as per your actual data
+    const topRead = articles.slice(0, 10); 
 
     if (loading) {
         return <p>Loading...</p>;

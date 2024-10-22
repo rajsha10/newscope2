@@ -55,9 +55,13 @@ ul li a{
   display: none;
 }
 
+.socialDropToggle{
+  display: none;
+}
+
 @media (max-width: 480px) {
   html{
-      font-size: 90%;
+      font-size: 80%;
   }
 
   .navbar{

@@ -40,7 +40,7 @@
 
 .tileThumbnail {
     width: 100%;
-    height: 150px;
+    height: 130px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -50,23 +50,26 @@
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
-    /* font-family: 'FigN'; */
+    font-family: 'FigN';
 }
 
 .tileDescription {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin-bottom: 10px;
-    /* font-family: 'FigI';  */
+    font-family: 'FigI'; 
     color: #000;
 }
 
 .tileAuthorDate {
     display: flex;
     justify-content: space-between;
-    font-size: 0.9rem;
-    color: gray;
-    /* font-family: 'FigI';  */
+}
+
+.tileAuthor, .tileDate{
+    font-size: 0.7rem;
+    color: rgb(128, 128, 128);
+    font-family: 'FigI'; 
 }
 
 /* topRead section styling */
@@ -77,20 +80,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 0.8rem;
     border-radius: 0.6rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .topRead h3{
-    font-size: 2rem;
+    font-size: 1.9rem;
 }
 
 .topReadItem {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .topReadItem:hover{
@@ -99,7 +102,7 @@
 }
 
 .topReadThumbnail {
-    width: 100px; /* Adjust the size as needed */
+    width: 9.8rem; /* Adjust the size as needed */
     height: auto;
     border-radius: 8px;
     margin-right: 15px;
@@ -107,10 +110,10 @@
 
 .topReadDescription {
     flex-grow: 1;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: #0a0a59;
     font-weight: 600;
-    /* font-family: 'FigI';  */
+    font-family: 'FigI'; 
 }
 
 
