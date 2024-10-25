@@ -39,10 +39,9 @@ ul li a {
   gap: 10px; 
 }
 
-.socialDropToggle {
-  display: none;
-  cursor: pointer; 
-}
+  .socialDropToggle {
+    display: block; /* Show dropdown toggle on smaller screens */
+  }
 
 .socialDrop {
   position: absolute; 

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleDropdown } from '../../features/dropdownSlice';
 import styles from './Navbar.module.css';
 import logo from '/images/logoNav.png';
-import { FaInstagram, FaFacebook, FaYoutube, FaSquareXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaFacebook, FaLinkedin, FaSquareXTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -35,16 +35,18 @@ const Navbar = () => {
       {/* Social Icons for larger screens */}
       <ul className={styles.navLinks} id={styles.socials}>
         <li>
-          <a href="/"><FaInstagram color='white' /></a>
+          <a href="https://www.instagram.com/p/DAqwcUmTPqZ/?igsh=MWFxODZqZWxkc3g4bQ==" target='_blank'>
+          <FaInstagram color='white' /></a>
         </li>
         <li>
-          <a href="/"><FaFacebook color='white' /></a>
-        </li>
-        <li>
-          <a href="/"><FaYoutube color='white' /></a>
+          <a href="https://www.facebook.com/share/p/qDS4oUScx47gu4V8/" target='_blank'>
+          <FaFacebook color='white' /></a>
         </li>
         <li>
           <a href="/"><FaSquareXTwitter color='white' /></a>
+        </li>
+        <li>
+          <a href="/"><FaLinkedin color='white' /></a>
         </li>
       </ul>
 
@@ -64,7 +66,7 @@ const Navbar = () => {
               <a href="/"><FaFacebook color='black' /></a>
             </li>
             <li>
-              <a href="/"><FaYoutube color='black' /></a>
+              <a href="/"><FaLinkedin color='black' /></a>
             </li>
             <li>
               <a href="/"><FaSquareXTwitter color='black' /></a>
