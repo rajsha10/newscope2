@@ -13,7 +13,7 @@ export default function Hero({ articles }) {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 2000,
     };
 
     return (
@@ -21,7 +21,7 @@ export default function Hero({ articles }) {
             <Slider {...settings}>
                 {articles.map((article) => (
                     <div key={article._id} className={styles.sliderItem}>
-                    <Link to={`/article/${article._id}`}>
+                    <Link to={`/${article.title}`}>
                         <div className={styles.imageContainer}>
                             <img src={article.thumbnail} alt={article.title} className={styles.articleThumbnail} />
                             <div className={styles.textOverlay}>

@@ -1,42 +1,24 @@
-/* 
-@font-face {
-  font-family: 'Noto'; 
-  src: url('/fonts/NotoSans-VariableFont_wdth,wght.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'FigI'; 
-  src: url('/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'FigN'; 
-  src: url('/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
-} */
-
+/* Navbar Styling */
 .navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 5rem;
-  align-self: center;
+  padding: 0.7rem 5rem; /* Adjust padding as needed */
   background-color: #be1e2d;
 }
 
-/* .logoContainer {
-  flex-grow: 1;
-} */
-
 .logo {
-  height: 40px;
+  height: 40px; /* Logo height */
 }
 
 .navLinks {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 20px; /* Space between nav items */
 }
 
-ul li a{
+ul li a {
   font-size: 20px;
   transition: all 0.18s ease;
 }
@@ -44,69 +26,72 @@ ul li a{
 .navLink {
   text-decoration: none;
   font-size: 18px;
-  color: #fff;
+  color: #fff; /* Link color */
 }
 
 .navLink:hover {
   color: #ddd;
 }
 
-.socialDrop{
-  display: none;
+/* Social Icons */
+#socials {
+  display: flex; 
+  gap: 10px; 
 }
 
+.socialDropToggle {
+  display: none;
+  cursor: pointer; 
+}
+
+.socialDrop {
+  position: absolute; 
+  right: 0; 
+  margin-top: 15rem; 
+  background-color: #fff; 
+  border: 1px solid #ddd; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); 
+  display: none; 
+  flex-direction: column; 
+  z-index: 9999; 
+}
+
+.socialDrop.active {
+  display: flex;
+}
+
+.socialDrop ul {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.socialDrop ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* Responsive Styling for Small Devices */
 @media (max-width: 480px) {
-  html{
-      font-size: 90%;
+  .navbar {
+    padding: 0.7rem 1rem; /* Adjust padding */
   }
 
-  .navbar{
-      height: 3rem;
-      width: 100%;
-      padding: 0.7rem 1rem;
+  .navbar a img {
+    width: 8rem; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
   }
 
-  .navbar a img{
-      width: 8rem;
-      height: auto;
-  }
-
-  #socials{
-    display: none;
-  }
-
-  .socialDrop{
-    display: flex;
-  }
-
-  .navLink{
-    font-size: 0.9rem;
+  #socials {
+    display: none; /* Hide social icons */
   }
 
   .socialDropToggle {
-    display: block; /* Show dropdown toggle on smaller screens */
+    display: block; /* Show dropdown toggle on small screens */
+    color: #fff; /* Toggle color */
+    font-size: 20px; /* Toggle font size */
   }
 
-  .socialDrop {
-    position: absolute;
-    display: block;
-    margin-top: 14rem;
-    right: 0;
-  }
-
-  .socialDrop ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .socialDrop ul li {
-    padding: 0.5rem;
-    background-color: skyblue;
-  }
-
-  .socialDrop ul li a {
-    color: white;
-    font-size: 20px;
+  .navLink {
+    font-size: 0.9rem; /* Smaller font size for links */
   }
 }
-

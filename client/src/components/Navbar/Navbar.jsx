@@ -32,6 +32,7 @@ const Navbar = () => {
           <Link to="/about" className={styles.navLink}>About Us</Link>
         </li>
       </ul>
+      {/* Social Icons for larger screens */}
       <ul className={styles.navLinks} id={styles.socials}>
         <li>
           <a href="/"><FaInstagram color='white' /></a>
@@ -52,9 +53,9 @@ const Navbar = () => {
         {isDropdownOpen ? 'X' : '☰'}
       </div>
 
-      {/* Dropdown for Social Icons */}
+      {/* // Dropdown for Social Icons */}
       {isDropdownOpen && (
-        <div className={`${styles.socialDrop} ${isDropdownOpen ? 'active' : ''}`}>
+        <div className={`${styles.socialDrop} ${isDropdownOpen ? styles.active : ''}`}>
           <ul>
             <li>
               <a href="/"><FaInstagram color='black' /></a>
