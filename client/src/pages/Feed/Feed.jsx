@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 const Feed = () => {
      const dispatch = useDispatch();
      const { articles, loading, error } = useSelector((state) => state.news);
-
+ 
      useEffect(() => {
           dispatch(fetchNews());
      }, [dispatch]);

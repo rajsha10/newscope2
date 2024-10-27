@@ -67,7 +67,7 @@ export default function SinglePost() {
             </div>
           )}
           <div className={styles.newsAuthorDate}>
-            <p className={styles.newsAuthor}>{article.author.name}</p>
+          {article.author && <p className={styles.articleAuthor}>{article.author.name}</p>}
             <p className={styles.newsDate}>{formatDate(article.createdAt)}</p>
           </div>
         </div>

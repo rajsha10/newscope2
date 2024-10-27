@@ -62,7 +62,7 @@ const NewsTiles = () => {
                             <h3 className={styles.tileTitle}>{article.title}</h3>
                             <p className={styles.tileDescription}>{article.description.substring(0, 100)}...</p>
                             <div className={styles.tileAuthorDate}>
-                                <p className={styles.tileAuthor}>{article.author.name}</p>
+                                {article.author && <p className={styles.tileAuthor}>{article.author.name}</p>}
                                 <p className={styles.tileDate}>{formatDate(article.createdAt)}</p>
                             </div>
                         </Link>
@@ -106,7 +106,7 @@ const NewsTiles = () => {
                     <button
                         onClick={nextTopReadSlide}
                         className={styles.sliderNavButton}
-                        disabled={topReadSlideIndex === topRead.length/2 - 1}
+                        disabled={topReadSlideIndex === topRead.length / 2 - 1}
                     >
                         Next
                     </button>

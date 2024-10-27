@@ -16,15 +16,21 @@ const Article = ({ article }) => {
 
   return (
     <div className={styles.article}>
-  <h2>{article.title}</h2>
-  <img src={article.thumbnail} alt={article.title} className={styles.articleThumbnail} />
-  <p>{article.description}</p>
-  <div className={styles.articleAuthor}>
-    <img src={article.author.avatar} alt={article.author.name} className={styles.authorAvatar} />
-    <p>{article.author.name}</p>
-  </div>
-  <p className={styles.articleDate}>{formatDate(article.createdAt)}</p>
-</div>
+      <h2>{article.title}</h2>
+      <img src={article.thumbnail} alt={article.title} className={styles.articleThumbnail} />
+      <p>{article.description}</p>
+      
+      {article.author && (
+        <div className={styles.articleAuthor}>
+          {article.author.avatar && (
+            <img src={article.author.avatar} alt={article.author.name} className={styles.authorAvatar} />
+          )}
+          <p>{article.author.name}</p>
+        </div>
+      )}
+      
+      <p className={styles.articleDate}>{formatDate(article.createdAt)}</p>
+    </div>
   );
 };
 

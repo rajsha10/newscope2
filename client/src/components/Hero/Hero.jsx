@@ -21,19 +21,19 @@ export default function Hero({ articles }) {
             <Slider {...settings}>
                 {articles.map((article) => (
                     <div key={article._id} className={styles.sliderItem}>
-                    <Link to={`/${article.title}`}>
-                        <div className={styles.imageContainer}>
-                            <img src={article.thumbnail} alt={article.title} className={styles.articleThumbnail} />
-                            <div className={styles.textOverlay}>
-                                <h2 className={styles.articleTitle}>{article.title}</h2>
-                                <p className={styles.articleDescription}>{article.description.substring(0, 100)}...</p>
-                                <div className={styles.articleDetails}>
-                                <p className={styles.articleAuthor}>{article.author.name}</p>                                    
-                                <p className={styles.articleDate}>{formatDate(article.createdAt)}</p>
+                        <Link to={`/${article.title}`}>
+                            <div className={styles.imageContainer}>
+                                <img src={article.thumbnail} alt={article.title} className={styles.articleThumbnail} />
+                                <div className={styles.textOverlay}>
+                                    <h2 className={styles.articleTitle}>{article.title}</h2>
+                                    <p className={styles.articleDescription}>{article.description.substring(0, 100)}...</p>
+                                    <div className={styles.articleDetails}>
+                                        {article.author && <p className={styles.articleAuthor}>{article.author.name}</p>}
+                                        <p className={styles.articleDate}>{formatDate(article.createdAt)}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </Link>
+                        </Link>
                     </div>
                 ))}
             </Slider>

@@ -2,10 +2,10 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchNews = createAsyncThunk('news/fetchNews', async () => {
-  const response = await axios.get('https://newscope2-q4e6.vercel.app/api/v1/news');
+  const response = await axios.get('http://localhost:5000/api/v1/news');
   return response.data;
 });
-
+ 
 const newsSlice = createSlice({
   name: 'news',
   initialState: {
