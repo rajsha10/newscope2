@@ -209,10 +209,11 @@
     .newsTilesContainer {
         flex-direction: column;
         align-items: center;
+        max-width: 100%;
     }
 
     .newsTiles {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 0.5fr);
         gap: 15px;
         width: 90%;
     }
@@ -249,7 +250,7 @@
 /* Small devices (phones, max-width: 480px) */
 @media (max-width: 480px) {
     .newsTiles {
-        grid-template-columns: repeat(2, 0.5fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 10px;
         width: 100%;
     }
