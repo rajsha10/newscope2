@@ -57,7 +57,7 @@
 
 /* Top Read slider section styling */
 .topRead {
-    width: 100%;
+    width: 100vw;
     background-color: white;
     padding: 1rem;
     border-radius: 0.6rem;
@@ -249,7 +249,7 @@
 /* Small devices (phones, max-width: 480px) */
 @media (max-width: 480px) {
     .newsTiles {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 0.5fr);
         gap: 10px;
         width: 100%;
     }
@@ -272,8 +272,12 @@
         font-size: 0.7rem;
     }
 
+    .topRead {
+        width: 90vw;
+    }
+
     .topRead h3 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .topReadSliderContainer {
@@ -282,6 +286,7 @@
 
     .topReadItem {
         min-width: 100%;
+        height: 20rem;
         text-align: center;
     }
 
@@ -292,7 +297,7 @@
     }
 
     .topReadDescription {
-        font-size: 0.7rem;
+        font-size: 1rem;
         margin-top: 0.5rem;
     }
 }
