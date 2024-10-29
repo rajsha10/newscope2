@@ -57,7 +57,7 @@
 
 /* Top Read slider section styling */
 .topRead {
-    width: 100vw;
+    width: 100%;
     background-color: white;
     padding: 1rem;
     border-radius: 0.6rem;

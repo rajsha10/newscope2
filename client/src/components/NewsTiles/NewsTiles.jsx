@@ -11,7 +11,7 @@ const NewsTiles = () => {
     const [currentPage, setCurrentPage] = useState(1);
 
     // Pagination settings
-    const articlesPerPage = 20;
+    const articlesPerPage = 12;
     const indexOfLastArticle = currentPage * articlesPerPage;
     const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
     const currentArticles = articles.slice(indexOfFirstArticle, indexOfLastArticle);

@@ -18,7 +18,7 @@ const Article = ({ article }) => {
     <div className={styles.article}>
       <h2>{article.title}</h2>
       <img src={article.thumbnail} alt={article.title} className={styles.articleThumbnail} />
-      <p>{article.description}</p>
+      <p>{article.description.substring(0, 200)}...</p>
       
       {article.author && (
         <div className={styles.articleAuthor}>
