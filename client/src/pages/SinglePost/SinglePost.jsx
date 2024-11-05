@@ -61,7 +61,7 @@ export default function SinglePost() {
                     className={styles.authorAvatar}
                   />
                 )}
-                <span className={styles.authorName}>By {article.author.name}</span>
+                <span className={styles.authorName}> {article.author.name}</span>
               </div>
             )}
             <time className={styles.articleDate}>
