@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectCategories } from '../../features/categorySlice';
-import styles from './CategoryBar.module.css'
+import { Link } from 'react-router-dom';
+import styles from './CategoryBar.module.css';
 
 const CategoryBar = () => {
     const categories = useSelector(selectCategories);
@@ -11,9 +12,9 @@ const CategoryBar = () => {
             <ul className={styles.categoryList}>
                 {categories.map((catName, id) => (
                     <li key={id} className={styles.categoryItem}>
-                        <a href={`#${catName.toLowerCase()}`} className={styles.categoryLink}>
+                        <Link to={`/category/${catName.toLowerCase()}`} className={styles.categoryLink}>
                             {catName}
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>
