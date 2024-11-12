@@ -88,12 +88,11 @@ export default function SinglePost() {
           dangerouslySetInnerHTML={{ __html: formatContent(article.description) }}
         />
 
-        {article.videoUrl && (
+        {article.videoLink && isYouTubeLink(article.videoLink) && (
           <div className={styles.videoContainer}>
             <iframe
-              src={article.videoUrl}
+              src={getEmbedUrl(article.videoLink)}
               title="YouTube video player"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
@@ -129,4 +128,14 @@ const formatContent = (content) => {
     .filter(paragraph => paragraph.trim() !== '')
     .map(paragraph => `<p>${paragraph}</p>`)
     .join('');
+};
+
+const getEmbedUrl = (url) => {
+  const videoId = url.split('v=')[1] || url.split('/').pop();
+  return `https://www.youtube.com/embed/${videoId}`;
+};
+
+const isYouTubeLink = (url) => {
+  // Checks if the URL is a valid YouTube link
+  return url.includes('youtube.com') || url.includes('youtu.be');
 };
