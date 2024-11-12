@@ -1,4 +1,7 @@
 /* Main Container */
+
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 .newsTilesContainer {
   display: flex;
   flex-direction: column;
@@ -53,12 +56,14 @@
 
 .tileTitle {
   font-size: 1.2rem;
+  font-family: "Playfair Display", serif;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .tileDescription {
   font-size: 1rem;
+  font-family: "Libre Franklin", sans-serif;
   margin-bottom: 10px;
   color: #000;
 }
@@ -67,6 +72,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
+  font-family: "Della Respira", serif;
   color: gray;
 }
 
@@ -87,6 +93,7 @@
 
 .topReadTitle {
   font-size: 1.5rem;
+  font-family: "Libre Franklin", sans-serif;
   font-weight: bold;
   color: #0a0a59;
   margin-bottom: 10px;
@@ -140,6 +147,7 @@
 
 .topReadDescription {
   font-size: 0.9rem;
+  font-family: "Della Respira", serif;
   color: #0a0a59;
   font-weight: 600;
   text-align: center;
